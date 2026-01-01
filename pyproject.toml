@@ -8,18 +8,34 @@ version = "0.1.0"
 authors = [
     {name = "Alvaro Lopez Ortega", email = "alvaro@alobbs.com"}
 ]
+description = "Web automation and testing library"
 readme = "README.md"
 requires-python = ">=3.9"
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+dependencies = [
+    "selenium",
+    "retrying",
 ]
 
 [project.urls]
 homepage = "https://github.com/alobbs/webest2"
+repository = "https://github.com/alobbs/webest2.git"
+documentation = "https://github.com/alobbs/webest2#readme"
 
 [tool.setuptools]
 packages = ["webest2"]
 
 [tool.setuptools.package-data]
-mypackage = ["*.txt"]
+webest2 = ["*.txt", "*.md"]
