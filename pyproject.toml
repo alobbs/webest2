@@ -9,7 +9,7 @@ authors = [
     {name = "Alvaro Lopez Ortega", email = "alvaro@alobbs.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
