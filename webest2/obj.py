@@ -82,7 +82,7 @@ def wait_for_obj(selector, timeout=30, browser=None):
     if not browser:
         browser = initializer.browser()
 
-    wait = ui.WebDriverWait(b, timeout)
+    wait = ui.WebDriverWait(browser, timeout)
     wait.until(lambda driver, s=selector: get_obj(s, browser=browser))
     return get_obj(selector, browser=browser)
 
