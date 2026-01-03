@@ -78,7 +78,7 @@ def obj_attr(selector, attr, not_found=None, browser=None):
     return not_found
 
 
-def wait_for_obj(b, selector, timeout=30):
+def wait_for_obj(selector, timeout=30, browser=None):
     if not browser:
         browser = initializer.browser()
 
