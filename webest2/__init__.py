@@ -51,6 +51,11 @@ def init_context(reuse=False, *args, **kwargs):
         cleanup()
 
 
+@retrying.retry(wait_fixed=30_000, retry_on_exception=ex.is_retry_exception)
+def __get_w_retry(browser, url):
+    browser.get(url)
+
+
 def load(url, browser=None):
     if not browser:
         browser = initializer.browser()
@@ -60,7 +65,7 @@ def load(url, browser=None):
         url = f"https://{url}"
 
     # Load URL
-    browser.get(url)
+    __get_w_retry(browser, url)
 
 
 def get_title():
